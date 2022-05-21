@@ -11,7 +11,7 @@
 <?import javafx.scene.text.Font?>
 
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ca.georgiancollege.comp1011m2022ice2.CalculateVector2DDistanceController">
+<AnchorPane prefHeight="350.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ca.georgiancollege.comp1011m2022ice2.CalculateVector2DDistanceController">
    <children>
       <VBox layoutX="96.0" layoutY="90.0">
          <children>
@@ -35,20 +35,23 @@
                 <RowConstraints maxHeight="-Infinity" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                   <RowConstraints maxHeight="-Infinity" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="-Infinity" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
                   <Label text="Starting Vector2D" GridPane.columnIndex="1" />
                   <Label text="X:" GridPane.columnIndex="2" />
-                  <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="51.0" GridPane.columnIndex="3" />
+                  <TextField fx:id="X1TextField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="51.0" GridPane.columnIndex="3" />
                   <Label text="Y:" GridPane.columnIndex="4" />
-                  <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="47.0" GridPane.columnIndex="5" />
+                  <TextField fx:id="Y1TextField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="47.0" GridPane.columnIndex="5" />
                   <Label layoutX="10.0" layoutY="21.0" text="Ending Vector2D" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                   <Label layoutX="123.0" layoutY="21.0" text="X:" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                  <TextField layoutX="135.0" layoutY="17.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="51.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                  <TextField fx:id="X2TextField" layoutX="135.0" layoutY="17.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="51.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
                   <Label layoutX="224.0" layoutY="21.0" text="Y:" GridPane.columnIndex="4" GridPane.rowIndex="2" />
-                  <TextField layoutX="235.0" layoutY="17.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="47.0" GridPane.columnIndex="5" GridPane.rowIndex="2" />
-                  <Button mnemonicParsing="false" text="Calculate" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                  <TextField GridPane.columnIndex="3" GridPane.columnSpan="3" GridPane.rowIndex="4" />
+                  <TextField fx:id="Y2TextField" layoutX="235.0" layoutY="17.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="47.0" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+                  <Button mnemonicParsing="false" onAction="#OnCalculateButtonClicked" text="Calculate" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <TextField fx:id="ResultTextField" GridPane.columnIndex="3" GridPane.columnSpan="3" GridPane.rowIndex="4" />
+                  <Button layoutX="21.0" layoutY="13.0" mnemonicParsing="false" onAction="#OnResetButtonClicked" text="Reset" GridPane.columnIndex="1" GridPane.rowIndex="6" />
                </children>
             </GridPane>
          </children>
